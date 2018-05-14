@@ -1,6 +1,6 @@
 # practicing pytube. for documentation, see https://github.com/nficano/pytube
 
-from pytube import YouTube
+from pytube import YouTube, Playlist
 
 # some example video link
 videoLink = 'https://www.youtube.com/watch?v=-EKxzId_Sj4'
@@ -13,6 +13,12 @@ youtube = YouTube(videoLink)
 
 # to download the lowest progressive download stream available
 # youtube.streams.last().download()
+
+# to download playlist
+playlist = Playlist('https://www.youtube.com/watch?v=Edpy1szoG80&list=PL153hDY-y1E00uQtCVCVC8xJ25TYX8yPU')
+# playlist.download_all()
+# playlist.download_all('../downloaded)
+# playlist.download_all(filename_prefix = 'ehe')
 
 # get video title
 videoTitle = youtube.title
